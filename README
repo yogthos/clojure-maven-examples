@@ -1,0 +1,20 @@
+In order to setup a Clojure project with Maven 2, you need to follow these steps:
+
+1) Get a copy of maven2 installed (http://maven.apache.org/)
+On Ubuntu: apt-get install maven2
+
+2) Get the clojure-maven-plugin (http://github.com/talios/clojure-maven-plugin/tree/master)
+run mvn install
+
+3) Install clojure.jar into your maven repository by running the following command:
+   mvn install:install-file -DgroupId=org.clojure -DartifactId=clojure -Dversion=1.0 -Dpackaging=jar -Dfile=clojure.jar
+   
+do this for any other Clojure libraries you intend to use, such as clojure-contrib
+
+4) You are now ready to create the pom.xml for your project.
+
+The first project we have is a sample Swing application that renders a Mandelbrot set.
+
+The second example is a simple web application based on the Servlet 2.5 specification, you can drop the resulting war on Tomcat to see the result. This example uses clojure-json library (http://github.com/danlarkin/clojure-json/tree/master) you would have to install it into your maven repository, as you did with the clojure.jar in step 3
+
+Hopefully, Both projects are fairly self explanatory and help you get started.
