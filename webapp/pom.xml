@@ -1,0 +1,59 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.clojure.web</groupId>
+    <artifactId>clojure-servlet</artifactId>
+    <packaging>war</packaging>
+    <version>1.0</version>
+    <name>clojure-servlet</name>
+    <url>http://maven.apache.org</url>
+    
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.theoryinpractise</groupId>
+				    <artifactId>clojure-maven-plugin</artifactId>
+                <version>1.1-SNAPSHOT</version>
+                <configuration>
+
+                    <namespaces>
+                        <namespace>helloclojure.servlet</namespace>
+                    </namespaces>
+
+                    <sourceDirectories>
+                        <sourceDirectory>src</sourceDirectory>
+                    </sourceDirectories>
+
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>compile</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+
+    </build>
+    <dependencies>
+        <dependency>
+            <groupId>org.clojure</groupId>
+			   <artifactId>clojure</artifactId>
+			   <version>1.1.0-alpha-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.clojure</groupId>
+			   <artifactId>clojure-json</artifactId>
+			   <version>1.0</version>
+        </dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<scope>provided</scope>					
+		</dependency>
+    </dependencies>    
+</project>
