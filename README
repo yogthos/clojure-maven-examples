@@ -15,9 +15,9 @@ do this for any other Clojure libraries you intend to use, such as clojure-contr
 
 The first project we have is a sample Swing application that renders a Mandelbrot set.
 
-The second example is a simple web application based on the Servlet 2.5 specification, you can drop the resulting war on Tomcat to see the result. This example uses clojure-json library (http://github.com/danlarkin/clojure-json/tree/master) 
+The second example is a simple web application based on the Servlet 2.5 specification, you can drop the resulting war on Tomcat to see the result. 
 
-you would have to install it into your maven repository, as you did with the clojure.jar in step 3, by running:
+The second example uses clojure-json library (http://github.com/danlarkin/clojure-json/tree/master), you would have to install it into your maven repository, as you did with the clojure.jar in step 3, by running:
 
   mvn install:install-file -DgroupId=org.clojure -DartifactId=clojure-json -Dversion=1.0 -Dpackaging=jar -Dfile=clojure-json.jar
 
