@@ -19,6 +19,6 @@ The second example is a simple web application based on the Servlet 2.5 specific
 
 you would have to install it into your maven repository, as you did with the clojure.jar in step 3, by running:
 
-  mvn install:install-file -DgroupId=org.clojure -DartifactId=clojure-json -Dversion=1.0 -Dpackaging=jar -Dfile=clojure.jar
+  mvn install:install-file -DgroupId=org.clojure -DartifactId=clojure-json -Dversion=1.0 -Dpackaging=jar -Dfile=clojure-json.jar
 
 Hopefully, Both projects are fairly self explanatory and help you get started.
