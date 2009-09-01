@@ -7,7 +7,7 @@ On Ubuntu: apt-get install maven2
 run mvn install
 
 3) Install clojure.jar into your maven repository by running the following command:
-   mvn install:install-file -DgroupId=org.clojure -DartifactId=clojure -Dversion=1.0 -Dpackaging=jar -Dfile=clojure.jar
+   mvn install:install-file -DgroupId=org.clojure -DartifactId=clojure -Dversion=1.1.0-alpha-SNAPSHOT -Dpackaging=jar -Dfile=clojure.jar
    
 do this for any other Clojure libraries you intend to use, such as clojure-contrib
 
