@@ -34,11 +34,22 @@
             </plugin>
         </plugins>
     </build>
-    <dependencies>
-        <dependency>
-            <groupId>org.clojure</groupId>
-			   <artifactId>clojure</artifactId>
-			   <version>1.1.0-alpha-SNAPSHOT</version>
-        </dependency>
-    </dependencies>    
+	
+	<dependencies>
+    <dependency>
+      <groupId>org.clojure</groupId>
+      <artifactId>clojure-lang</artifactId>
+      <version>1.1.0-alpha-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
+ 
+  <!-- Source of Clojure snapshot dependencies. -->
+ 
+  <repositories>
+    <repository>
+      <id>tapestry-snapshots</id>
+      <url>http://tapestry.formos.com/maven-snapshot-repository/</url>
+    </repository>
+  </repositories>
+
 </project>

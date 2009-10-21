@@ -42,7 +42,7 @@
     <dependencies>
         <dependency>
             <groupId>org.clojure</groupId>
-   	    <artifactId>clojure</artifactId>
+   	    <artifactId>clojure-lang</artifactId>
 	    <version>1.1.0-alpha-SNAPSHOT</version>
         </dependency>
         <dependency>
@@ -57,4 +57,10 @@
 	    <scope>provided</scope>					
 	</dependency>
     </dependencies>    
+<repositories>
+    <repository>
+      <id>tapestry-snapshots</id>
+      <url>http://tapestry.formos.com/maven-snapshot-repository/</url>
+    </repository>
+  </repositories>
 </project>
