@@ -7,51 +7,65 @@
     <version>1.0</version>
     <name>mandelbrot-example</name>
     <url>http://maven.apache.org</url>
-    
+
     <build>
         <plugins>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.4</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <mainClass>org.yogthos.mandelbrot</mainClass>
+                            <classpathPrefix>dependency</classpathPrefix>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>2.8</version>
+                <executions>
+                    <execution>
+                        <id>copy-dependencies</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
                 <groupId>com.theoryinpractise</groupId>
                 <artifactId>clojure-maven-plugin</artifactId>
-                <version>1.3.2</version>
+                <version>1.3.13</version>
+                <extensions>true</extensions>
                 <configuration>
                     <sourceDirectories>
                         <sourceDirectory>src</sourceDirectory>
                     </sourceDirectories>
                 </configuration>
                 <executions>
-                    <execution>
-                        <id>compile</id>
-                        <phase>compile</phase>
-                        <goals>
-                            <goal>compile</goal>
-                        </goals>
-                    </execution>
+                  <execution>
+                      <id>compile</id>
+                      <phase>compile</phase>
+                      <goals>
+                          <goal>compile</goal>
+                      </goals>
+                  </execution>
                 </executions>
             </plugin>
         </plugins>
     </build>
-	
+
 	<dependencies>
     <dependency>
-            <groupId>org.clojure</groupId>
-            <artifactId>clojure</artifactId>
-            <version>1.1.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.clojure</groupId>
-            <artifactId>clojure-contrib</artifactId>
-            <version>1.1.0</version>
-        </dependency>
+	    <groupId>org.clojure</groupId>
+	    <artifactId>clojure</artifactId>
+	    <version>1.6.0</version>
+    </dependency>
   </dependencies>
- 
-  <!-- Source of Clojure snapshot dependencies. -->
- 
-  <repositories>
-    <repository>
-            <id>clojure</id>
-            <url>http://build.clojure.org/releases</url>
-        </repository>
-  </repositories>
-
 </project>
