@@ -6,15 +6,13 @@
     <packaging>war</packaging>
     <version>1.0</version>
     <name>clojure-servlet</name>
-    <url>http://maven.apache.org</url>
-    
+
     <build>
         <plugins>
-
             <plugin>
                 <groupId>com.theoryinpractise</groupId>
                 <artifactId>clojure-maven-plugin</artifactId>
-                <version>1.3.2</version>
+                <version>1.3.13</version>
                 <configuration>
                     <sourceDirectories>
                         <sourceDirectory>src</sourceDirectory>
@@ -31,35 +29,30 @@
                 </executions>
             </plugin>
         </plugins>
-
     </build>
     <dependencies>
         <dependency>
             <groupId>org.clojure</groupId>
             <artifactId>clojure</artifactId>
-            <version>1.1.0</version>
+            <version>1.6.0</version>
         </dependency>
         <dependency>
-            <groupId>org.clojure</groupId>
-            <artifactId>clojure-contrib</artifactId>
-            <version>1.1.0</version>
+            <groupId>hiccup</groupId>
+            <artifactId>hiccup</artifactId>
+            <version>1.0.5</version>
         </dependency>
-        <dependency>
-            <groupId>org.clojure</groupId>
-	    <artifactId>clojure-json</artifactId>
-	    <version>1.0</version>
-        </dependency>
-	<dependency>
-	    <groupId>javax.servlet</groupId>
-	    <artifactId>servlet-api</artifactId>
-	    <version>2.5</version>
-	    <scope>provided</scope>					
-	</dependency>
-    </dependencies>    
-<repositories>
-     <repository>
-            <id>clojure</id>
-            <url>http://build.clojure.org/releases</url>
-        </repository>
+	      <dependency>
+	          <groupId>javax.servlet</groupId>
+	          <artifactId>servlet-api</artifactId>
+	          <version>2.5</version>
+	          <scope>provided</scope>
+	      </dependency>
+  </dependencies>
+
+  <repositories>
+      <repository>
+          <id>clojars.org</id>
+          <url>http://clojars.org/repo</url>
+      </repository>
   </repositories>
 </project>
